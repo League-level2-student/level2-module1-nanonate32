@@ -1,6 +1,14 @@
 package intro_to_array_lists;
 
-public class GuestBook {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class GuestBook implements ActionListener {
 	// Create a GUI with two buttons. One button reads "Add Name" and the other button reads "View Names". 
 	// When the add name button is clicked, display an input dialog that asks the user to enter a name. Add
 	// that name to an ArrayList. When the "View Names" button is clicked, display a message dialog that displays
@@ -9,4 +17,29 @@ public class GuestBook {
 	// Guest #2: Sandy Summers
 	// Guest #3: Greg Ganders
 	// Guest #4: Donny Doners
+
+	  ArrayList<String> strings = new ArrayList<String>();	
+	
+	
+	
+	
+
+	public void run() {
+		JFrame frame = new JFrame();
+	JPanel panel = new JPanel();
+	JButton addName = new JButton("Add Name");
+	JButton viewNames = new JButton("View Names");
+	frame.add(panel);
+	panel.add(addName);
+	panel.add(viewNames);
+addName.addActionListener(this);
+viewNames.addActionListener(this);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		
+	}
 }

@@ -3,6 +3,7 @@ package intro_to_array_lists;
 import java.util.ArrayList;
 
 public class IntroToArrayLists {
+	
 	public static void main(String[] args) {
 		//1. Create an array list of Strings
 		    ArrayList<String> strings = new ArrayList<String>();
@@ -39,6 +40,14 @@ public class IntroToArrayLists {
 		        	
 		        }
 		//7. Print only the Strings that have the letter 'e' in them.
-		        System.out.println();
+		        for (int i = 0; i < strings.size(); i++) {
+		        	String str = strings.get(i);
+					if(str.contains("e")) {
+						System.out.println(str);
+					}
+					
+					
+				}
+
 	}
 }

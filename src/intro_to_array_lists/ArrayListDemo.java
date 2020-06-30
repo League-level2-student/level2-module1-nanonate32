@@ -3,6 +3,7 @@ package intro_to_array_lists;
 import java.util.ArrayList;
 
 public class ArrayListDemo {
+	
 	public static void main(String[] args) {
 		System.out.println("Here's an ArrayList of Strings:\n");
 		//ArrayList of Strings
