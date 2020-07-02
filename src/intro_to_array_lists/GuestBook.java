@@ -31,23 +31,28 @@ public class GuestBook implements ActionListener {
 
 	public void run() {
 		frame.add(panel);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 		panel.add(addName);
 		panel.add(viewNames);
 		addName.addActionListener(this);
 		viewNames.addActionListener(this);
+		frame.pack();
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		String guest = null;
 		if (e.getSource() == addName) {
-			  String guest = JOptionPane.showInputDialog("Enter a name");
-			  names.add(guest);
+			guest = JOptionPane.showInputDialog("Enter a name");
+			names.add(guest);
 		}
 		if (e.getSource() == viewNames) {
+             for (int i = 0; i < names.size(); i++) {
+				JOptionPane.showMessageDialog(null, "Guest" + " " +  i + ":" + " " + names.get(i));
+			}
 			
-          JOptionPane.showMessageDialog(null, "Guest 1:" + " " +  guest);
-		}
 		}
 	}
 }
